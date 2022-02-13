@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderMain = styled.div`
   display: flex;
@@ -6,7 +6,7 @@ export const HeaderMain = styled.div`
   height: 10vh;
   justify-content: center;
   background-color: #0caba8;
-`;
+`
 
 export const HeaderSubMain = styled.div`
   display: flex;
@@ -16,11 +16,11 @@ export const HeaderSubMain = styled.div`
   height: 100%;
   justify-content: space-between;
   align-items: center;
-`;
+`
 
 export const TitleMain = styled.h1`
   font-size: 3rem;
   color: #fff;
   font-weight: 700;
   font-family: "Hepta Slab", serif;
-`;
+`

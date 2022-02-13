@@ -43,6 +43,10 @@
     "@types/axios": "^0.14.0",
     "@types/react-icons": "^3.0.0",
     "@types/styled-components": "^5.1.22",
-    "customize-cra": "^1.0.0"
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "customize-cra": "^1.0.0",
+    "eslint": "^8.9.0",
+    "eslint-plugin-react": "^7.28.0"
   }
 }

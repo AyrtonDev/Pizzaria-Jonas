@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const BtnAdd = styled.div`
   width: 50px;
@@ -16,13 +16,13 @@ export const BtnAdd = styled.div`
   &:hover {
     background-color: #023535;
   }
-`;
+`
 
 export const DivBtn = styled.div`
   display: flex;
   width: auto;
   height: auto;
-`;
+`
 
 export const BtnDescrement = styled.button`
   border: none;
@@ -33,7 +33,7 @@ export const BtnDescrement = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const ShowAMount = styled.div`
   padding: 5px 10px;
@@ -43,7 +43,7 @@ export const ShowAMount = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Hepta Slab", serif;
-`;
+`
 
 export const BtnIncrement = styled.button`
   border: none;
@@ -54,4 +54,4 @@ export const BtnIncrement = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`

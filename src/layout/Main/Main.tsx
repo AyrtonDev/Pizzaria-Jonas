@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
-import { MainDiv, SubMainDiv } from "./style";
+import { ReactNode } from 'react'
+import { MainDiv, SubMainDiv } from './style'
 
 type mainProps = {
   children: ReactNode;
 };
 
 export const Main = ({ children }: mainProps) => {
-  return (
-    <MainDiv>
-      <SubMainDiv>{children}</SubMainDiv>
-    </MainDiv>
-  );
-};
+	return (
+		<MainDiv>
+			<SubMainDiv>{children}</SubMainDiv>
+		</MainDiv>
+	)
+}

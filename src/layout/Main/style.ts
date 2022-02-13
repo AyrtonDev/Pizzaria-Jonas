@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const MainDiv = styled.div`
   display: Flex;
@@ -6,7 +6,7 @@ export const MainDiv = styled.div`
   height: 90vh;
   justify-content: center;
   background-color: #fff;
-`;
+`
 
 export const SubMainDiv = styled.div`
   display: flex;
@@ -14,4 +14,4 @@ export const SubMainDiv = styled.div`
   width: 100%;
   height: 100%;
   flex-direction: column;
-`;
+`

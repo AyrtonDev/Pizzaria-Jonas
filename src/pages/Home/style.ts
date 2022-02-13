@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const GridPizza = styled.div`
   display: flex;
@@ -7,4 +7,4 @@ export const GridPizza = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding: 4rem 0 4rem 0;
-`;
+`
