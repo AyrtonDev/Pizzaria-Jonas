@@ -2,19 +2,10 @@ import { Card, DivImg, TextNormal, TextDesc, TitleProduct } from "./style";
 import { ButtonAdd } from "../../components/Button/ButtonAdd";
 import { useState } from "react";
 import { ModalProduct } from "../../components/Modal/ModalProduct";
-
-type pizzasProps = {
-  id: number;
-  name: string;
-  img: string;
-  price: number;
-  priceFormat: string;
-  sizes: [string];
-  description: string;
-};
+import { PizzasProps } from "../../types/PIzzas";
 
 type CardProps = {
-  pizza: pizzasProps;
+  pizza: PizzasProps;
 };
 
 export const CardPizza = ({ pizza }: CardProps) => {
@@ -28,7 +19,11 @@ export const CardPizza = ({ pizza }: CardProps) => {
       <TextNormal>{pizza.priceFormat}</TextNormal>
       <TitleProduct>{pizza.name}</TitleProduct>
       <TextDesc>{pizza.description}</TextDesc>
-      <ModalProduct isOpen={openModal} onClose={() => setOpenModal(false)} />
+      <ModalProduct
+        isOpen={openModal}
+        onClose={() => setOpenModal(false)}
+        idProduct={pizza.id}
+      />
     </Card>
   );
 };

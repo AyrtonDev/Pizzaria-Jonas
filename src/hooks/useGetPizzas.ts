@@ -1,18 +1,9 @@
 import { formatPrice } from "../utils/formatPrice";
 import axios from "axios";
-
-type pizzasProps = {
-  id: number;
-  name: string;
-  img: string;
-  price: number;
-  priceFormat: string;
-  sizes: [string];
-  description: string;
-};
+import { PizzasProps } from "../types/PIzzas";
 
 export const GetPizzas = async (
-  setPizzas: React.Dispatch<React.SetStateAction<pizzasProps[] | null>>
+  setPizzas: React.Dispatch<React.SetStateAction<PizzasProps[] | null>>
 ) => {
   try {
     const { data } = await axios.get("http://localhost:3000/pizzas");

@@ -1,16 +1,22 @@
 import styled from "styled-components";
 
-export const LayerPrincipal = styled.div`
+type modalProps = {
+  isOpen: boolean;
+};
+
+export const LayerPrincipal = styled.div<modalProps>`
   width: 100%;
   height: 100%;
   position: fixed;
-  display: flex;
+  display: ${(props) => (props.isOpen ? "flex" : "none")};
   top: 0;
   left: 0;
+  opacity: ${(props) => (props.isOpen ? "1" : "0")};
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
   z-index: 999;
+  transition: 0.3s;
 `;
 
 export const Modal = styled.div`

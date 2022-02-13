@@ -4,6 +4,6 @@ export type PizzasProps = {
   img: string;
   price: number;
   priceFormat: string;
-  sizes: [string];
+  sizes: string[];
   description: string;
 };

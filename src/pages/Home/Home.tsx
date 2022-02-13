@@ -1,31 +1,24 @@
 import { useEffect, useState } from "react";
 import { GridPizza } from "./style";
-import { GetPizzas } from "../../hooks/useGetPizzas";
+// import { GetPizzas } from "../../hooks/useGetPizzas";
 import { CardPizza } from "../../components/Card/CardPizza";
-
-type pizzasProps = {
-  id: number;
-  name: string;
-  img: string;
-  price: number;
-  priceFormat: string;
-  sizes: [string];
-  description: string;
-};
+import { PizzasProps } from "../../types/PIzzas";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { GetPizzasApi } from "../../features/pizzas/pizzas-api-slice";
 
 export default () => {
-  const [pizzas, setPizzas] = useState<pizzasProps[] | null>(null);
-
-  function getList() {
-    GetPizzas(setPizzas);
-  }
+  const dispatch = useAppDispatch();
+  const pizzas = useAppSelector((state) => state.pizzas.entities);
 
   useEffect(() => {
-    getList();
+    dispatch(GetPizzasApi());
   }, []);
+  const showAll = () => {
+    console.log(pizzas);
+  };
 
   return (
-    <GridPizza>
+    <GridPizza onClick={showAll}>
       {pizzas ? (
         pizzas.map((item, index) => <CardPizza key={index} pizza={item} />)
       ) : (
