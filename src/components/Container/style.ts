@@ -20,3 +20,16 @@ export const DivDescPizza = styled.div`
   flex-direction: column;
   justify-content: space-around;
 `
+
+export const DivTitlePage = styled.div`
+  display: flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  padding: 0 5rem;
+`
+
+export const TitlePage = styled.h1`
+  font-family: "Hepta Slab", serif;
+  font-weight: bold;
+`

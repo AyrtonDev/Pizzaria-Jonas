@@ -38,7 +38,7 @@ export const BtnDescrement = styled.button`
 export const ShowAMount = styled.div`
   padding: 5px 10px;
   background-color: #eee;
-  cursor: none;
+  cursor: default;
   display: flex;
   justify-content: center;
   align-items: center;

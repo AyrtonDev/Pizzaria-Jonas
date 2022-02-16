@@ -16,7 +16,7 @@ export const LayerPrincipal = styled.div<modalProps>`
   justify-content: center;
   align-items: center;
   z-index: 999;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 `
 
 export const Modal = styled.div`

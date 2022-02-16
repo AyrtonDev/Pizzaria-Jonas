@@ -16,6 +16,10 @@ export const HeaderSubMain = styled.div`
   height: 100%;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
+  a:-webkit-any-link {
+    text-decoration: none;
+  }
 `
 
 export const TitleMain = styled.h1`
@@ -23,4 +27,33 @@ export const TitleMain = styled.h1`
   color: #fff;
   font-weight: 700;
   font-family: "Hepta Slab", serif;
+`
+
+type CartStyleProps = {
+  cart: number | undefined;
+};
+
+export const DivCart = styled.div<CartStyleProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  position: relative;
+  cursor: ${(props)=> props.cart != 0 ? 'pointer' : 'normal'}
+`
+
+export const ItemsCart = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f20202;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  bottom: -5px;
+  right: 0;
+  font-size: 10px;
 `

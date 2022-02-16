@@ -85,5 +85,21 @@
       "description": "Descrição da pizza em mais de uma linha muito legal bem interessante"
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "id": 23132,
+      "items": [
+        {
+          "pizzaId": 2,
+          "pizzaName": "Calabresa",
+          "size": "530g",
+          "amount": 2,
+          "unitPrice": 18
+        }
+      ],
+      "subTotal": 36,
+      "total": 36,
+      "discount": 0
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { PizzasProps } from '../../types/PIzzas'
+import { PizzasProps } from '../../types/Pizzas'
 
 // First, create the thunk
 export const GetPizzasApi = createAsyncThunk('pizzas/GetList', async () => {

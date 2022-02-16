@@ -6,5 +6,5 @@ export const GridPizza = styled.div`
   height: auto;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 4rem 0 4rem 0;
+  padding: 0 0 4rem 0;
 `
