@@ -6,25 +6,25 @@ import { GetCartApi } from '../../features/cart/cartItems-api-slice'
 import { Link } from 'react-router-dom'
 
 export const Header = () => {
-	const dispatch = useAppDispatch()
-	const cart = useAppSelector((state) => state.cart.entities)
+  const dispatch = useAppDispatch()
+  const cart = useAppSelector((state) => state.cart.entities.length)
 
-	useEffect(() => {
-		dispatch(GetCartApi())
-	}, [])
-	return (
-		<HeaderMain>
-			<HeaderSubMain>
-				<Link to="/">
-					<TitleMain>Jonas Pizzaria</TitleMain>
-				</Link>
-				<Link to="/cart">
-					<DivCart cart={cart}>
-						<BsFillCartFill color="#fff" fontSize="2rem" />
-						{cart.items.length != 0 && <ItemsCart>{cart}</ItemsCart>}
-					</DivCart>
-				</Link>
-			</HeaderSubMain>
-		</HeaderMain>
-	)
+  useEffect(() => {
+    dispatch(GetCartApi())
+  }, [])
+  return (
+    <HeaderMain>
+      <HeaderSubMain>
+        <Link to="/">
+          <TitleMain>Jonas Pizzaria</TitleMain>
+        </Link>
+        <Link to="/cart">
+          <DivCart cart={cart}>
+            <BsFillCartFill color="#fff" fontSize="2rem" />
+            {cart != 0 && <ItemsCart>{cart}</ItemsCart>}
+          </DivCart>
+        </Link>
+      </HeaderSubMain>
+    </HeaderMain>
+  )
 }

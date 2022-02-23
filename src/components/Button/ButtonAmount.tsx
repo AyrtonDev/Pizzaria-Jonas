@@ -8,15 +8,15 @@ type amountProps = {
 };
 
 export const BtnAmount = ({ amount, descrement, increment }: amountProps) => {
-	return (
-		<DivBtn>
-			<BtnDescrement onClick={descrement}>
-				<IoIosRemove fontSize="1rem" opacity={amount === 1 ? '0.2' : '1'} />
-			</BtnDescrement>
-			<ShowAMount>{amount}</ShowAMount>
-			<BtnIncrement onClick={increment}>
-				<IoIosAdd fontSize="1rem" opacity={amount === 8 ? '0.2' : '1'} />
-			</BtnIncrement>
-		</DivBtn>
-	)
+  return (
+    <DivBtn>
+      <BtnDescrement onClick={descrement}>
+        <IoIosRemove fontSize="1rem" opacity={amount === 1 ? '0.2' : '1'} />
+      </BtnDescrement>
+      <ShowAMount>{amount}</ShowAMount>
+      <BtnIncrement onClick={increment}>
+        <IoIosAdd fontSize="1rem" opacity={amount === 8 ? '0.2' : '1'} />
+      </BtnIncrement>
+    </DivBtn>
+  )
 }

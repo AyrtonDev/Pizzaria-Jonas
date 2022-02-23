@@ -24,9 +24,9 @@ export const DivDescPizza = styled.div`
 export const DivTitlePage = styled.div`
   display: flex;
   height: 80px;
-  width: 100%;
+  width: 80%;
   align-items: center;
-  padding: 0 5rem;
+  align-self: center;
 `
 
 export const TitlePage = styled.h1`

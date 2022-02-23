@@ -6,22 +6,22 @@ import { GetPizzasApi } from '../../features/pizzas/pizzas-api-slice'
 import { DivTitlePage, TitlePage } from '../../components/Container/style'
 
 export default () => {
-	const dispatch = useAppDispatch()
-	const pizzas = useAppSelector((state) => state.pizzas.entities)
+  const dispatch = useAppDispatch()
+  const pizzas = useAppSelector((state) => state.pizzas.entities)
 
-	useEffect(() => {
-		dispatch(GetPizzasApi())
-	}, [])
+  useEffect(() => {
+    dispatch(GetPizzasApi())
+  }, [])
 
-	return (
-		<>
-			<DivTitlePage>
-				<TitlePage>Pizzas</TitlePage>
-			</DivTitlePage>
-			<GridPizza>
-				{pizzas && (
-					pizzas.map((item, index) => <CardPizza key={index} pizza={item} />))}
-			</GridPizza>
-		</>
-	)
+  return (
+    <>
+      <DivTitlePage>
+        <TitlePage>Pizzas</TitlePage>
+      </DivTitlePage>
+      <GridPizza>
+        {pizzas && (
+          pizzas.map((item, index) => <CardPizza key={index} pizza={item} />))}
+      </GridPizza>
+    </>
+  )
 }
