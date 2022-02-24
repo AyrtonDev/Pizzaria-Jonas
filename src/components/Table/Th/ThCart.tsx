@@ -2,7 +2,7 @@ import { DivText, RowTable, TitlaTh } from './style'
 
 export const THeader = () => {
   return (
-    <RowTable border='2px solid #fff'>
+    <RowTable border='2px solid var(--red)'>
       <DivText justify='center'>
         <TitlaTh>Item</TitlaTh>
       </DivText>

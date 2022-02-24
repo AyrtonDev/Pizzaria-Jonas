@@ -22,15 +22,14 @@ export const TextNormal = styled.text`
   margin: 2rem 0 2rem 0;
 `
 
-export const TitleProduct = styled.text`
-  font-family: "Hepta Slab", serif;
+export const TitleProduct = styled.h4`
   font-size: 1.1rem;
+  color: var(--yellow); 
   margin: -1rem 0 0 0;
   font-weight: bold;
 `
 
-export const TextDesc = styled.text`
-  font-family: "Hepta Slab", serif;
+export const TextDesc = styled.p`
   font-size: 0.9rem;
   margin-top: 1rem;
   text-align: center;

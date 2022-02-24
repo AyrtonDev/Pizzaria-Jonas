@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500;600;700&family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,500&display=swap');
+
+:root {
+  --black: #161616;
+  --dark: #000;
+  --yellow: #ffde00;
+  --red: #f20202;
+  --red-dark: #a20202;
+  --green: #54fe54;
+  --white: #f6f6f6;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+span,
+div,
+button {
+  color: var(--white);
+  font-family: 'Hepta Slab', serif;
+  padding: 0;
+  margin: 0;
+}

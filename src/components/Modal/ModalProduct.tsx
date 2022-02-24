@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { useGetPizzaQuery } from '../../features/pizzas/pizza-api-slice'
-import { formatPrice } from '../../utils/formatPrice'
-import { BtnAmount } from '../Button/ButtonAmount'
-import { DivColumn, DivDescPizza } from '../Container/style'
+import { useGetPizzaQuery } from 'features/pizzas/pizza-api-slice'
+import { formatPrice } from 'utils/formatPrice'
+import { BtnAmount } from 'components/Button/ButtonAmount'
+import { DivColumn, DivDescPizza } from 'components/Container/style'
 import {
   BtnAddCart,
   Cancel,
@@ -15,19 +15,20 @@ import {
   OptionLeft,
   OptionMiddle,
   OptionRight,
+  OptionText,
   PriceT,
   SpanSize,
   TitleOption,
-  TitleProductModal,
+  TitleProductModal
 } from './style'
 
 type ModalProps = {
-  isOpen: boolean;
-  onClose: () => void;
-  idProduct: number;
-};
+  isOpen: boolean
+  onClose: () => void
+  idProduct: number
+}
 
-type sizeProps = 'sm' | 'md' | 'lg';
+type sizeProps = 'sm' | 'md' | 'lg'
 
 export const ModalProduct = ({ isOpen, onClose, idProduct }: ModalProps) => {
   const { data, isFetching } = useGetPizzaQuery(idProduct)
@@ -70,19 +71,25 @@ export const ModalProduct = ({ isOpen, onClose, idProduct }: ModalProps) => {
                   sizeSct={sizeSelect}
                   onClick={() => setSizeSelect('sm')}
                 >
-                  PEQUENA <SpanSize>{data?.sizes[0]}</SpanSize>
+                  <OptionText>
+                    PEQUENA <SpanSize>{data?.sizes[0]}</SpanSize>
+                  </OptionText>
                 </OptionLeft>
                 <OptionMiddle
                   sizeSct={sizeSelect}
                   onClick={() => setSizeSelect('md')}
                 >
-                  MÉDIO <SpanSize>{data?.sizes[1]}</SpanSize>
+                  <OptionText>
+                    MÉDIO <SpanSize>{data?.sizes[1]}</SpanSize>
+                  </OptionText>
                 </OptionMiddle>
                 <OptionRight
                   sizeSct={sizeSelect}
                   onClick={() => setSizeSelect('lg')}
                 >
-                  GRANDE <SpanSize>{data?.sizes[2]}</SpanSize>
+                  <OptionText>
+                    GRANDE <SpanSize>{data?.sizes[2]}</SpanSize>
+                  </OptionText>
                 </OptionRight>
               </DivSize>
               <TitleOption>PREÇO</TitleOption>

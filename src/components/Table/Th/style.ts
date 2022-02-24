@@ -30,5 +30,5 @@ export const DivText = styled.div<divText>`
 export const TitlaTh = styled.p`
     font-family: "Hepta Slab", serif;
     font-weight: bold;
-    color: #fff;
+    color: var(--black);
 `

@@ -11,7 +11,7 @@ export default () => {
       </DivTitlePage>
       <DivCart>
         <THeader />
-        <TBody item={2} img='imgages/pizza.png' nome='Mussarela' qnt={2} price={16.0} />
+        <TBody item={1} img='images/pizza.png' nome='Mussarela' qnt={2} price={16.0} />
       </DivCart>
     </>
   )

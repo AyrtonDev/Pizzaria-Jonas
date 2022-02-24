@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
 import { store } from './app/store'
 import './style/normalize.css'
-import './style/fonts.css'
+import './style/global.css'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(

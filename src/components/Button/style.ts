@@ -6,7 +6,7 @@ export const BtnAdd = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0caba8;
+  background-color: var(--red);
   transition: 0.3s;
   border-radius: 50%;
   position: absolute;
@@ -14,7 +14,7 @@ export const BtnAdd = styled.div`
   left: 37%;
   cursor: pointer;
   &:hover {
-    background-color: #023535;
+    background-color: var(--red-dark);
   }
 `
 
@@ -27,7 +27,7 @@ export const DivBtn = styled.div`
 export const BtnDescrement = styled.button`
   border: none;
   padding: 5px 10px;
-  background-color: #eee;
+  background-color: var(--black);
   border-radius: 10px 0 0 10px;
   cursor: pointer;
   display: flex;
@@ -37,18 +37,17 @@ export const BtnDescrement = styled.button`
 
 export const ShowAMount = styled.div`
   padding: 5px 10px;
-  background-color: #eee;
+  background-color: var(--black);
   cursor: default;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Hepta Slab", serif;
 `
 
 export const BtnIncrement = styled.button`
   border: none;
   padding: 5px 10px;
-  background-color: #eee;
+  background-color: var(--black);
   border-radius: 0 10px 10px 0;
   cursor: pointer;
   display: flex;

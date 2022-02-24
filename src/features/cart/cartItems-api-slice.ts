@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { CartProps } from '../../types/Cart'
+import { CartProps } from 'types/Cart'
 import { v4 as uuid4 } from 'uuid'
 
 const id = localStorage.getItem('CART_ID')

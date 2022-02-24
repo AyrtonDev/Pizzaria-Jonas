@@ -5,7 +5,6 @@
     "jest": true,
     "node": true
   },
-  "extends": ["next", "next/core-web-vitals", "prettier"],
   "plugins": ["react", "react-hooks"],
   "rules": {
     "react-hooks/rules-of-hooks": "error",

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 type modalProps = {
-  isOpen: boolean;
-};
+  isOpen: boolean
+}
 
 export const LayerPrincipal = styled.div<modalProps>`
   width: 100%;
@@ -12,7 +12,7 @@ export const LayerPrincipal = styled.div<modalProps>`
   top: 0;
   left: 0;
   opacity: ${(props) => (props.isOpen ? '1' : '0')};
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(255, 255, 255, 0.3);
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -22,7 +22,7 @@ export const LayerPrincipal = styled.div<modalProps>`
 export const Modal = styled.div`
   width: 900px;
   height: 450px;
-  background-color: #fff;
+  background-color: #000;
   border-radius: 5px;
   z-index: 9999;
   display: flex;
@@ -35,23 +35,21 @@ export const ModalContainer = styled.div`
   padding: 1rem;
 `
 
-export const TitleProductModal = styled.text`
-  font-family: "Hepta Slab", serif;
+export const TitleProductModal = styled.h3`
   font-size: 1.6rem;
   font-weight: bold;
+  color: var(--yellow);
 `
 
-export const DescProductModal = styled.text`
-  font-family: "Hepta Slab", serif;
-  color: #4d4d4d;
+export const DescProductModal = styled.p`
+  color: var(--white);
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: normal;
 `
 
-export const TitleOption = styled.text`
-  font-family: "Hepta Slab", serif;
-  color: #adadad;
-  font-size: 1.2rem;
+export const TitleOption = styled.h4`
+  color: var(--yellow);
+  font-size: 1rem;
   font-weight: normal;
 `
 
@@ -62,15 +60,17 @@ export const DivSize = styled.div`
 `
 
 type sizeSctProps = {
-  sizeSct: 'sm' | 'md' | 'lg';
-};
+  sizeSct: 'sm' | 'md' | 'lg'
+}
 
-export const OptionLeft = styled.div<sizeSctProps>`
-  font-family: "Hepta Slab", serif;
-  color: ${(props) => (props.sizeSct === 'sm' ? '#fff' : '#000')};
-  background-color: ${(props) => (props.sizeSct === 'sm' ? '#399ade' : '#EEE')};
+export const OptionText = styled.p`
   font-size: 0.9rem;
   font-weight: bold;
+`
+
+export const OptionLeft = styled.div<sizeSctProps>`
+  color: var(--white);
+  background-color: ${(props) => (props.sizeSct === 'sm' ? 'var(--red)' : 'var(--black)')};
   padding: 10px 15px;
   border-radius: 10px 0 0 10px;
   cursor: pointer;
@@ -82,11 +82,8 @@ export const OptionLeft = styled.div<sizeSctProps>`
 `
 
 export const OptionMiddle = styled.div<sizeSctProps>`
-  font-family: "Hepta Slab", serif;
-  color: ${(props) => (props.sizeSct === 'md' ? '#fff' : '#000')};
-  background-color: ${(props) => (props.sizeSct === 'md' ? '#399ade' : '#EEE')};
-  font-size: 0.9rem;
-  font-weight: bold;
+  color: var(--white);
+  background-color: ${(props) => (props.sizeSct === 'md' ? 'var(--red)' : 'var(--black)')};
   padding: 10px 15px;
   cursor: pointer;
   transition: 0.2s;
@@ -97,11 +94,8 @@ export const OptionMiddle = styled.div<sizeSctProps>`
 `
 
 export const OptionRight = styled.div<sizeSctProps>`
-  font-family: "Hepta Slab", serif;
-  color: ${(props) => (props.sizeSct === 'lg' ? '#fff' : '#000')};
-  background-color: ${(props) => (props.sizeSct === 'lg' ? '#399ade' : '#EEE')};
-  font-size: 0.9rem;
-  font-weight: bold;
+  color: var(--white);
+  background-color: ${(props) => (props.sizeSct === 'lg' ? 'var(--red)' : 'var(--black)')};
   padding: 10px 15px;
   border-radius: 0 10px 10px 0;
   cursor: pointer;
@@ -119,7 +113,6 @@ export const SpanSize = styled.span`
 `
 
 export const PriceT = styled.text`
-  font-family: "Hepta Slab", serif;
   font-size: 1.4rem;
   font-weight: 600;
 `
@@ -134,29 +127,31 @@ export const DivPrice = styled.div`
 export const BtnAddCart = styled.button`
   border: none;
   padding: 10px 15px;
-  color: #fff;
-  background-color: #54fe54;
-  font-family: "Hepta Slab", serif;
+  color: var(--green);
+  border: 2px solid var(--green);
+  background-color: transparent;
   font-size: 1.1rem;
   border-radius: 5px;
   cursor: pointer;
   margin-right: 25px;
   transition: 0.2s;
   :hover {
-    background-color: #005300;
+    background-color: var(--green);
+    color: var(--white);
   }
 `
 
 export const Cancel = styled.button`
   border: none;
   padding: 10px 15px;
-  background-color: #eee;
+  border: 2px solid var(--red);
+  background-color: var(--red);
   border-radius: 5px;
-  font-family: "Hepta Slab", serif;
+
   cursor: pointer;
   transition: 0.2s;
   :hover {
-    color: #fff;
-    background-color: #434343;
+    color: var(--red);
+    background-color: transparent;
   }
 `

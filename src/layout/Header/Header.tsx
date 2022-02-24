@@ -1,8 +1,8 @@
 import { DivCart, HeaderMain, HeaderSubMain, ItemsCart, TitleMain } from './style'
 import { BsFillCartFill } from 'react-icons/bs'
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { useEffect } from 'react'
-import { GetCartApi } from '../../features/cart/cartItems-api-slice'
+import { GetCartApi } from 'features/cart/cartItems-api-slice'
 import { Link } from 'react-router-dom'
 
 export const Header = () => {
@@ -16,11 +16,11 @@ export const Header = () => {
     <HeaderMain>
       <HeaderSubMain>
         <Link to="/">
-          <TitleMain>Jonas Pizzaria</TitleMain>
+          <TitleMain>Celso Pizzaria</TitleMain>
         </Link>
         <Link to="/cart">
           <DivCart cart={cart}>
-            <BsFillCartFill color="#fff" fontSize="2rem" />
+            <BsFillCartFill color="var(--yellow)" fontSize="2rem" />
             {cart != 0 && <ItemsCart>{cart}</ItemsCart>}
           </DivCart>
         </Link>

@@ -1,8 +1,8 @@
 import { Card, DivImg, TextNormal, TextDesc, TitleProduct } from './style'
-import { ButtonAdd } from '../../components/Button/ButtonAdd'
+import { ButtonAdd } from 'components/Button/ButtonAdd'
 import { useState } from 'react'
-import { ModalProduct } from '../../components/Modal/ModalProduct'
-import { PizzasProps } from '../../types/Pizzas'
+import { ModalProduct } from 'components/Modal/ModalProduct'
+import { PizzasProps } from 'types/Pizzas'
 
 type CardProps = {
   pizza: PizzasProps;

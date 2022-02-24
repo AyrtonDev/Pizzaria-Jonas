@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const MainDiv = styled.div`
+export const MainDiv = styled.main`
   display: Flex;
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--dark);
 `
 
 export const SubMainDiv = styled.div`

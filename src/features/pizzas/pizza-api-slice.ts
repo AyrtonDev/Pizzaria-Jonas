@@ -1,4 +1,4 @@
-import { PizzasProps } from '../../types/Pizzas'
+import { PizzasProps } from 'types/Pizzas'
 import { createApi } from '@reduxjs/toolkit/query/react'
 import axios from 'axios'
 
